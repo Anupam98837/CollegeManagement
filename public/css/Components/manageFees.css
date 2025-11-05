@@ -1,0 +1,37 @@
+.settingsButton_addfees{
+    background-color: white;
+    border-radius: 5px 5px 0px 0px;
+    color: gray;
+    border: none;
+}
+.settingsButton_addfees:hover{
+    background-color: gray;
+    color: white;
+}
+.courseTypeDropdown_addfees{
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+}
+.icon-rotate {
+    animation: spin 1s linear infinite;
+}
+.feeTypeInput {
+    background-color: #e9f7ff;  /* Light blue background */
+    color: #858585;  /* Darker text for readability */
+    border: 1px solid #b3e5fc;  /* Soft blue border */
+    font-weight: bold;  /* Make text stand out */
+    cursor: not-allowed;  
+    padding: 3px 6px;
+    border-radius: 5px;  /* Rounded corners for a softer look */
+    text-align: center;  /* Center the text */
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

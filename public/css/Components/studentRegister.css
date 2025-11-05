@@ -1,0 +1,56 @@
+.admin_ragister_form{
+    padding: 10px;
+    min-height: 100vh;
+    background-color: #e9ecef;
+}
+.admin_ragister_student_form{
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+
+}
+.admin_ragister_form_submitbtn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.admin_ragister_student_form_con{
+    padding: 20px;
+}
+.progress-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.progress-container-text{
+    color: gray;
+}
+#as_addCollegeBtn,
+#as_addClassXIIBtn,
+#as_showClassXButton {
+    background: transparent;
+    border: none;
+    color: gray;
+    background-color: transparent;
+    border-radius: 25px;
+    display: block;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#as_addCollegeBtn:hover,
+#as_addClassXIIBtn:hover,
+#as_showClassXButton:hover {
+    color: #0d6efd; /* Change text color on hover */
+    cursor: pointer; /* Show pointer cursor */
+}
+@media (max-width: 1000px) {
+    .admin_ragister_form {
+        padding: 5px; /* Reduced padding for smaller screens */
+    }
+    .admin_ragister_student_form_con{
+        padding: 10px;
+    }
+    .progress-container-text{
+        display: none;
+    }
+}

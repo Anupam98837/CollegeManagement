@@ -1,0 +1,17 @@
+.tableshowrole {
+    width: 100%;
+}
+
+.tableshowrole tr td, 
+.tableshowrole tr th {
+    padding: 10px; /* Adjust padding as needed */
+}
+.toggle-password {
+    cursor: pointer;
+    color: #6c757d; /* Bootstrap secondary color */
+    background-color: white;
+    padding: 5px;
+}
+.toggle-password:hover {
+    color: #007bff; /* Bootstrap primary color on hover */
+}

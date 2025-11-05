@@ -1,0 +1,137 @@
+.user-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    color: #6c757d;
+    display: fixed;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.admin-header h5 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #ffffff;
+    color: #6c757d;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1050;
+}
+.sidebar.active {
+    left: 0;
+}
+#toggleSidebar{
+    display: none
+}
+@media (max-width: 1000px){
+    #toggleSidebar{
+    display: block;
+}
+}
+.sidebar .nav-link {
+    color: #6c757d;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+.sidebar .nav-link:hover {
+    background-color: #e9ecef;
+    color: #495057;
+    border-radius: 4px;
+}
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+.sidebar .menu-header {
+    padding: 15px 20px;
+    background-color: #f1f3f5;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6c757d;
+    border-bottom: 1px solid #dee2e6;
+}
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.sidebar .close-btn:hover {
+    color: #495057;
+}
+.content {
+    margin-left: 0;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.content.shifted {
+    margin-left: 250px;
+}
+.as-search-bar {
+position: relative;
+display: flex;
+align-items: center;
+flex-grow: 1; /* Allows it to take up available space */
+max-width: 400px; /* Set a max width */
+margin: 0 auto; /* Center align */
+}
+
+.as-search-bar input {
+width: 100%;
+padding: 8px 40px 8px 15px;
+border: 1px solid #dee2e6;
+border-radius: 20px;
+font-size: 0.95rem;
+outline: none;
+transition: all 0.3s ease;
+}
+
+.as-search-bar input:focus {
+border-color: #6c757d;
+box-shadow: 0 0 5px rgba(108, 117, 125, 0.3);
+}
+#ah_toggleSidebar{
+    display: none;
+}
+
+.as-search-bar i {
+position: absolute;
+right: 15px;
+font-size: 1.2rem;
+color: #6c757d;
+cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+.user-header{
+    position: fixed;
+    z-index: 1000;
+    width: 100%
+}
+.as-search-bar {
+    max-width: 300px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+#ah_toggleSidebar{
+    display: block;
+}
+
+}

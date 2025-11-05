@@ -1,0 +1,150 @@
+/* Define CSS Variables for Consistency */
+:root {
+  --sidebar-bg: #060029;
+  --sidebar-border: #dee2e6;
+  --scrollbar-thumb: #6c757d;
+  --scrollbar-track: #f8f9fa;
+  --link-color: #6c757d;
+  --link-hover-bg: rgba(136, 138, 141, 0.35);
+  --active-border: #0d6efd;
+  --active-text: #fff;
+  --active-parent-bg: #0d6efd;
+  --logout-hover-bg: #e9ecef;
+  --logout-hover-color: #495057;
+  --transition-speed: 0.3s;
+}
+
+/* Sidebar Container */
+.as-slim-sidebar {
+  height: 100vh;
+  width: 200px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  transition: all var(--transition-speed) ease;
+}
+
+/* Custom Scrollbar */
+.as-slim-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.as-slim-sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
+}
+.as-slim-sidebar::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+
+/* Logo Styling */
+.as-slim-sidebar .as-logo {
+  width: 100%;
+  /* height: 200px; */
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Navigation Styling */
+.as-slim-sidebar .as-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+/* Nav Link Styling */
+.as-slim-sidebar .as-nav-link {
+  color: var(--link-color);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+.as-slim-sidebar .as-nav-link:hover {
+  background-color: var(--link-hover-bg);
+  color: var(--link-color);
+}
+
+/* Active Link Styling */
+.as-slim-sidebar .as-nav-link.active {
+  /* border-left: 2px solid var(--active-border); */
+  color: var(--active-text);
+}
+
+/* Active Parent Link Styling */
+.as-slim-sidebar .as-nav-link.active-parent {
+  /* background-color: var(--active-parent-bg); */
+  border-left: 2px solid var(--active-border);
+  color: var(--active-text);
+}
+
+/* Icon Styling */
+.as-slim-sidebar .as-nav-link i {
+  font-size: 1.2rem;
+}
+
+/* Submenu Styling */
+.as-slim-sidebar .as-submenu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+  padding-left: 10px;
+  animation: slideDown var(--transition-speed) ease;
+}
+.as-slim-sidebar .as-submenu .as-nav-link {
+  font-size: 0.85rem;
+  padding-left: 20px;
+}
+
+/* Show Submenu When Dropdown is Open */
+.as-slim-sidebar .as-dropdown.open .as-submenu {
+  display: flex;
+}
+
+/* Logout Link Styling */
+.as-slim-sidebar .as-logout {
+  font-size: 1rem;
+  color: var(--link-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+.as-slim-sidebar .as-logout:hover {
+  background-color: var(--logout-hover-bg);
+  color: var(--logout-hover-color);
+}
+
+/* Responsive: Hide Sidebar on Small Screens */
+@media (max-width: 1000px) {
+  .as-slim-sidebar {
+    display: none;
+    position: fixed;
+    top: 70px;
+    z-index: 10001;
+    height: 100%;
+  }
+}
+
+/* Optional: Slide Down Animation for Submenus */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
